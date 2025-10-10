@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 function SearchBar(props) {
+
     const [jobCriteria, setJobCriteria] = useState({
         title: "",
         locaion: "",
@@ -14,6 +15,7 @@ function SearchBar(props) {
             [e.target.name]: e.target.value
         }))
     }
+    console.log(jobCriteria)
 
     const search = async() => {
         await props.fetchJobsCustom(jobCriteria);
@@ -49,7 +51,7 @@ function SearchBar(props) {
             <option value="Mid Level">Mid Level</option>
             <option value="Senior Level">Senior Level</option>
         </select>
-        <button onClick={search} className='w-64 bg-blue-500 text-white font-bold py-3 rounded-md cursor-pointer hover:scale-103'>Search</button>
+        <button onClick={search} className='w-64 bg-blue-500 text-white py-3 rounded-md cursor-pointer hover:scale-104 transition-all duration-200'>Search</button>
     </div>
   )
 }
