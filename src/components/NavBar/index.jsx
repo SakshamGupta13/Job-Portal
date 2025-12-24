@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function NavBar() {
   return (
     <div className='h-20 flex items-center w-full text-white'>
         <div className='text-3xl pl-20 font-bold'>JobConnect.</div>
@@ -9,4 +9,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavBar
